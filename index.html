@@ -12,6 +12,14 @@
 
         FB.AppEvents.logPageView();
 
+
+      function statusChangeCallback(r){
+          console.log(r);
+      }
+      FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+      });
+
       };
 
       (function(d, s, id){
@@ -27,12 +35,6 @@
   </head>
   <body>
     <script type="text/javascript">
-      function statusChangeCallback(r){
-          console.log(r);
-      }
-      FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-      });
 
     </script>
 
